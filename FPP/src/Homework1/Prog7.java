@@ -1,6 +1,5 @@
 package Homework1;
 
-
 public class Prog7 {
 	public static void main(String[] args) {
 		int len = 0;
