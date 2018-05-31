@@ -14,8 +14,6 @@ public class Customer {
 		this.socSecurityNum = socSecurityNum;
 	}
 
-	
-
 	public String getFirstName() {
 		return firstName;
 	}
