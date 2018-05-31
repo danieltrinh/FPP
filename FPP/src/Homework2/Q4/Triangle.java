@@ -1,16 +1,25 @@
 package Homework2.Q4;
 
 public class Triangle {
-	private final double width;
+	
+	private final double base;
 	private final double height;
 	
-	public Triangle(double width, double height) {
-		this.width = width;
+	public Triangle(double base, double height) {
+		this.base = base;
 		this.height = height;
 	}
 	
-	public final double computeArea(double width, double height)
+	public double getBase() {
+		return base;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public final double computeArea()
 	{
-		return width * height;
+		return 0.5 * base * height;
 	}
 }

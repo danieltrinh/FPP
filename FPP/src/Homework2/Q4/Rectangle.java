@@ -1,17 +1,26 @@
 package Homework2.Q4;
 
 public class Rectangle {
-	private final double base;
+	
+	private final double width;
 	private final double height;
 	
-	public Rectangle(double base, double height) {
-		this.base = base;
+	public Rectangle(double width, double height) {
+		this.width = width;
 		this.height = height;
+	}
+	
+	public double getWidth() {
+		return width;
+	}
+
+	public double getHeight() {
+		return height;
 	}
 
 	public final double computeArea()
 	{
-		return 1/2 * base * height;
+		return width * height;
 	}
 	
 }
