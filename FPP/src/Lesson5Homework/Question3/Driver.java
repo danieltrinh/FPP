@@ -1,4 +1,4 @@
-package Question3;
+package Lesson5Homework.Question3;
 
 public class Driver {
 	public static void main(String[] args) {

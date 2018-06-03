@@ -1,4 +1,4 @@
-package Question3;
+package Lesson5Homework.Question3;
 
 public class UpwardHat implements Figure{
 
