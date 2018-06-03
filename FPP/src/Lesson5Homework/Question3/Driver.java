@@ -31,3 +31,12 @@ public class Driver {
 		}
 	}
 }
+/* OUTPUT
+/\/\ \/:)||
+---------
+UpwardHat : /\
+UpwardHat : /\
+DownwardHat :  \/
+FaceMaker : :)
+Vertical : ||
+*/
