@@ -1,6 +1,6 @@
 package Lesson5Homework.Question3;
 
-public class Driver {
+public class Main {
 	public static void main(String[] args) {
 		Figure[] fs = new Figure[5];
 		
