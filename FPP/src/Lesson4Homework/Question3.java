@@ -39,8 +39,9 @@ public class Question3 {
 	public static void main(String[] args) {
 		int[] c1 = new int[] {1,2,5,6,8,9};
 		System.out.println(binarySearch(c1, 2));
-		
-		//OUTPUT
-		// 1
+
 	}
 }
+
+//OUTPUT
+// 1

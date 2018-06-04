@@ -26,11 +26,11 @@ public class Question4 {
 		System.out.println(palindrome("MADDAM"));
 		System.out.println(palindrome("MADAM"));
 		System.out.println(palindrome("MMMAAAM"));
-		
-		//OUTPUT
-		//true
-		//true
-		//false
-
 	}
 }
+
+
+//OUTPUT
+//true
+//true
+//false

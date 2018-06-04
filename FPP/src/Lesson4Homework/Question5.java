@@ -25,3 +25,6 @@ class Question5 {
 		assertEquals(ao, eo);
 	}
 }
+
+// OUTPUT
+// test and test2 correct

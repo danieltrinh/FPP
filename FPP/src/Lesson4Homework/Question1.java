@@ -36,8 +36,8 @@ public class Question1 {
 		
 		q1.mergeTwoSorted("ace", "bdf");
 		System.out.println(q1.res);
-		
-		//OUTPUT
-		//abcdef
 	}
 }
+
+//OUTPUT
+//abcdef
