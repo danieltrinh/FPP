@@ -14,7 +14,7 @@ public class Main {
 		
 		for (Employee e : ems) {
 			System.out.println(e.toString());
-			System.out.println("----------");
+			 System.out.println("----------");
 			sumSalary += e.getPayment();
 		}
 		
