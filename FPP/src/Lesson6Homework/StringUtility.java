@@ -1,3 +1,4 @@
+/* QUESTION 1 */
 package Lesson6Homework;
 
 import java.awt.Container;

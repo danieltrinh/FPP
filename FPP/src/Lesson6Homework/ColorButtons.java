@@ -1,3 +1,4 @@
+/* QUESTION 2 */
 package Lesson6Homework;
 
 import java.awt.Color;
