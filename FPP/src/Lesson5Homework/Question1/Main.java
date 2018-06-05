@@ -25,3 +25,26 @@ public class Main {
 		}
 	}
 }
+
+/* OUTPUT
+Shape blue Circle:
+Area: 1256.637061 
+Perimeter: 125.663706
+--------------
+Shape red Circle:
+Area: 2827.433388 
+Perimeter: 188.495559
+--------------
+Shape green Rectangle:
+Area: 1000.000000 
+Perimeter: 140.000000
+--------------
+Shape blue Square:
+Area: 1225.000000 
+Perimeter: 140.000000
+--------------
+Shape purple Rectangle:
+Area: 1452.000000 
+Perimeter: 154.000000
+--------------
+ */
