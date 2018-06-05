@@ -17,6 +17,7 @@ public class Prog6 {
 				{
 					input[j] = input[uniqueSize-1];
 					uniqueSize--;
+					// to make sure the switched last element does not have the same value as input[i]
 					j--;
 				}
 			}
