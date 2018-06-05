@@ -36,15 +36,68 @@ public class StringUtility extends JFrame{
 		
 		countBtn.setBounds(30, 50, BTN_WIDTH, BTN_HEIGHT);
 		panel.add(countBtn);
-		countBtn.addActionListener(new CountEvent());
+		countBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String input = inputFld.getText();
+				outputFld.setText( countChars(input));
+			}
+			
+			private String countChars (String s)
+			{
+				return String.valueOf(s.length());
+			}
+		});
 		
 		reverseBtn.setBounds(30, 100, BTN_WIDTH, BTN_HEIGHT);
 		panel.add(reverseBtn);
-		reverseBtn.addActionListener(new ReverseEvent());
+		reverseBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String input = inputFld.getText();
+				outputFld.setText( reverseChars (input));
+			}
+			
+			private String reverseChars(String s)
+			{
+				StringBuilder rs = new StringBuilder();
+				for(int i = s.length()-1; i >= 0; i--)
+				{
+					rs.append(s.charAt(i));
+				}
+				return rs.toString();
+			}
+		});
 		
 		removeBtn.setBounds(30, 150, BTN_WIDTH, BTN_HEIGHT);
 		panel.add(removeBtn);
-		removeBtn.addActionListener(new RemoveDuplicatesEvent());
+		removeBtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				String input = inputFld.getText();
+				outputFld.setText( removeDuplicates (input));
+			}
+
+			private String removeDuplicates(String s) {
+				StringBuilder sb = new StringBuilder(s);
+				int newSize = sb.length();
+				
+				for(int i = 0; i< newSize; i++)
+				{
+					for (int j = i+1; j < newSize; j++)
+					{
+						if(sb.charAt(i) == sb.charAt(j))
+						{
+							sb.setCharAt(j, sb.charAt(newSize-1));
+							newSize--;
+							j--;
+						}
+					}
+				}
+				String result = sb.substring(0, newSize);
+				return result;
+			}
+		});
 		
 		JLabel l1 = new JLabel("Input");		
 		l1.setBounds(200, 40, FLD_WIDTH, FLD_HEIGHT);
@@ -60,75 +113,10 @@ public class StringUtility extends JFrame{
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
 	}
-	
-	class CountEvent implements ActionListener{
 
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			String input = inputFld.getText();
-			outputFld.setText( countChars(input));
-		}
-		
-		private String countChars (String s)
-		{
-			return String.valueOf(s.length());
-		}
-	}
-	
-	class ReverseEvent implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			String input = inputFld.getText();
-			outputFld.setText( reverseChars (input));
-		}
-		
-		private String reverseChars(String s)
-		{
-			StringBuilder rs = new StringBuilder();
-			for(int i = s.length()-1; i >= 0; i--)
-			{
-				rs.append(s.charAt(i));
-			}
-			return rs.toString();
-		}
-	}
-	
-	class RemoveDuplicatesEvent implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent arg0) {
-			String input = inputFld.getText();
-			outputFld.setText( removeDuplicates (input));
-		}
-
-		private String removeDuplicates(String s) {
-			StringBuilder sb = new StringBuilder(s);
-			int newSize = sb.length();
-			
-			for(int i = 0; i< newSize; i++)
-			{
-				for (int j = i+1; j < newSize; j++)
-				{
-					if(sb.charAt(i) == sb.charAt(j))
-					{
-						sb.setCharAt(j, sb.charAt(newSize-1));
-						newSize--;
-						j--;
-					}
-				}
-			}
-			String result = sb.substring(0, newSize);
-			return result;
-		}
-		
-	}
-	
-	
 	public static void main(String[] args) {
 		StringUtility su = new StringUtility("String Utility");
 		su.setVisible(true);
 	}
-	
 	
 }
