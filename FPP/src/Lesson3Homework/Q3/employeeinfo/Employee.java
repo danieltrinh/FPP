@@ -68,6 +68,7 @@ public class Employee {
 			case "RETIREMENT":
 				retirementAcct.makeDeposit(amt);
 				break;
+			default:
 		}
 	}
 	public boolean withdraw(String acctType, double amt){
@@ -80,8 +81,9 @@ public class Employee {
 				return savingsAcct.makeWithdrawal(amt);
 			case "RETIREMENT":
 				return retirementAcct.makeWithdrawal(amt);
+			default:
+				return false;
 		}
-		return false;
 	}
 
 }

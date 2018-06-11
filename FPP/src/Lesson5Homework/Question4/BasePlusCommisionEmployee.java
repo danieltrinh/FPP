@@ -12,7 +12,7 @@ public class BasePlusCommisionEmployee extends ComissionEmployee{
 	@Override
 	public double getPayment() {
 		// TODO Auto-generated method stub
-		return baseSalary + (grossSale * commissionRate);
+		return baseSalary + (super.getGrossSale() * super.getCommissionRate());
 	}
 
 	public double getBaseSalary() {

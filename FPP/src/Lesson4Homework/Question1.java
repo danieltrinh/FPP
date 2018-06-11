@@ -6,15 +6,16 @@ public class Question1 {
 
 	public String mergeTwoSorted(String s1, String s2)
 	{
+		if(s1.length() == 0 && s2.length() == 0) return res.toString();
 		if(s1 == "" || s1.length() == 0)
 		{
 			res.append(s2);
-			return s2;
+			return res.toString();
 		}
 		if(s2 == "" || s2.length() == 0)
 		{
 			res.append(s1);
-			return s1;
+			return res.toString();
 		}
 			
 		char temp1 = s1.charAt(0);
@@ -34,8 +35,7 @@ public class Question1 {
 	public static void main(String[] args) {
 		Question1 q1 = new Question1();
 		
-		q1.mergeTwoSorted("ace", "bdf");
-		System.out.println(q1.res);
+		System.out.println(q1.mergeTwoSorted("ace", "bdf"));
 	}
 }
 

@@ -1,7 +1,7 @@
 package Lesson5Homework.Question1;
 
 public class Shape {
-	String color;
+	protected String color;
 	
 	Shape (String color)
 	{

@@ -2,8 +2,8 @@ package Lesson5Homework.Question4;
 
 public class ComissionEmployee extends Employee{
 	
-	protected double grossSale;
-	protected double commissionRate;
+	private double grossSale;
+	private double commissionRate;
 
 	public ComissionEmployee(String firstName, String lastName, String socialSecurityNumber, double grossSale, double commissionRate) {
 		super(firstName, lastName, socialSecurityNumber);

@@ -1,6 +1,6 @@
 package Lesson3Homework.Q4;
 
-public class Rectangle {
+public final class Rectangle {
 	
 	private final double width;
 	private final double height;

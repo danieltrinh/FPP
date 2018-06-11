@@ -1,6 +1,6 @@
 package Lesson3Homework.Q4;
 
-public class Circle {
+public final class Circle {
 	
 	private final double radius;
 	

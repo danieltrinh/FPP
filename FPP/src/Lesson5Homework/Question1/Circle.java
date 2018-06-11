@@ -1,7 +1,7 @@
 package Lesson5Homework.Question1;
 
 public class Circle extends Shape{
-	double radius;
+	protected double radius;
 	
 	Circle(String color, double radius)
 	{
@@ -9,11 +9,13 @@ public class Circle extends Shape{
 		this.radius = radius;
 	}
 	
+	@Override
 	public double calculateArea()
 	{
 		return Math.PI * radius * radius;
 	}
 	
+	@Override
 	public double calculatePerimeter()
 	{
 		return 2 * Math.PI * radius;

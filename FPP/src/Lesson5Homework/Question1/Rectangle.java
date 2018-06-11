@@ -2,8 +2,8 @@ package Lesson5Homework.Question1;
 
 public class Rectangle extends Shape{
 	
-	double width;
-	double height;
+	protected double width;
+	protected double height;
 	
 	public Rectangle(String color, double width, double height) {
 		super(color);
