@@ -1,4 +1,4 @@
-package Lesson8Homework;
+package Lesson8Homework.Question1;
 
 class Search {
 	int[] anArray;
