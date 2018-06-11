@@ -2,8 +2,6 @@ package Lesson8Homework.Question2;
 
 import java.util.Arrays;
 
-import lesson8.MyStringList;
-
 public class MyPersonList {
 	private final int INITIAL_LENGTH = 4;
 	private Person[] perArr;
@@ -107,6 +105,56 @@ public class MyPersonList {
 
 	}
 	
+	// MinSort methods ( by Lastname) - Start
+		public void sort() {
+			if (perArr == null || perArr.length <= 1)
+				return;
+			int minIndex = 0;
+			for (int i = 0; i < this.size; i++) {
+				swap(minPos(i), i);
+			}
+		}
+
+		public void swap(int i, int j) {
+			Person temp = perArr[i];
+			perArr[i] = perArr[j];
+			perArr[j] = temp;
+		}
+
+		public int minPos(int startIndex) {
+			Person min = perArr[startIndex];
+			int minIndex = startIndex;
+			PersonComparator pc = new PersonComparator();
+			for (int i = startIndex + 1; i < this.size; i++) {
+				if (pc.compare(min, perArr[i]) > 0) {
+					min = perArr[i];
+					minIndex = i;
+				}
+			}
+			return minIndex;
+		}
+		// MinSort methods - End
+
+		// Search - Start
+		public boolean search(Person val) {
+			return recurse(0, size - 1, val);
+		}
+
+		private boolean recurse(int bot, int top, Person val) {
+			if (bot > top)
+				return false;
+			int mid = (bot + top) / 2;
+			
+			PersonComparator pc = new PersonComparator();
+			if (pc.compare(perArr[mid], val) < 0)
+				return recurse(mid + 1, top, val);
+			else if (pc.compare(perArr[mid], val) > 0)
+				return recurse(bot, mid - 1, val);
+			else
+				return true;
+		}
+		// Search - End
+	
 	public static void main(String[] args) {
 		
 		MyPersonList pers = new MyPersonList();
@@ -128,6 +176,16 @@ public class MyPersonList {
 		
 		pers.insert(new Person("Tonya", "Ahi",60), 3);
 		System.out.println("The list of size " + pers.size() + " after inserting Tonya into pos 0 is " + pers);
+		
+		pers.sort();
+		System.out.println("Person List after sort");
+		System.out.println(pers);
+		
+		System.out.println("Search for \"Star Lord\"- 20");
+		System.out.println(pers.search(new Person("Star", "Lord", 20)));
+
+		System.out.println("Search for \"Bob Dylan\" - 70");
+		System.out.println(pers.search(new Person("Bob", "Dylan", 70)));
 		
 		Person[] x = (Person[]) pers.clone();
 		System.out.println(Arrays.toString(x));
