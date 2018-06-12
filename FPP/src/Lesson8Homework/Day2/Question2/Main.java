@@ -48,3 +48,40 @@ public class Main {
 		return l;
 	}
 }
+
+/* OUTPUT
+
+Full list :
+[employeeName=Daniel, productName=Ipad, salesAmount=31233.543
+, employeeName=Kyle, productName=Iphone, salesAmount=234.45
+, employeeName=Leo, productName=MacBook, salesAmount=443123.543
+, employeeName=Ethan, productName=Imac, salesAmount=6123234.324
+, employeeName=Ethan, productName=Ikea, salesAmount=5123234.324
+, employeeName=Ethan, productName=Ikea, salesAmount=223.324
+, employeeName=Nathaniel, productName=Iwatch, salesAmount=213.43
+]
+after removing element at index 2 :
+[employeeName=Daniel, productName=Ipad, salesAmount=31233.543
+, employeeName=Kyle, productName=Iphone, salesAmount=234.45
+, employeeName=Ethan, productName=Imac, salesAmount=6123234.324
+, employeeName=Ethan, productName=Ikea, salesAmount=5123234.324
+, employeeName=Ethan, productName=Ikea, salesAmount=223.324
+, employeeName=Nathaniel, productName=Iwatch, salesAmount=213.43
+]
+List size:
+6
+Sorted List:
+[employeeName=Daniel, productName=Ipad, salesAmount=31233.543
+, employeeName=Ethan, productName=Ikea, salesAmount=223.324
+, employeeName=Ethan, productName=Ikea, salesAmount=5123234.324
+, employeeName=Ethan, productName=Imac, salesAmount=6123234.324
+, employeeName=Kyle, productName=Iphone, salesAmount=234.45
+, employeeName=Nathaniel, productName=Iwatch, salesAmount=213.43
+]
+Sorted List of employe with sales > 1000:
+[employeeName=Daniel, productName=Ipad, salesAmount=31233.543
+, employeeName=Ethan, productName=Ikea, salesAmount=5123234.324
+, employeeName=Ethan, productName=Imac, salesAmount=6123234.324
+]
+
+*/

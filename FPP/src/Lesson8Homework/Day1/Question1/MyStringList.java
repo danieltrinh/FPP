@@ -144,22 +144,6 @@ public class MyStringList {
 	}
 
 	public static void main(String[] args) {
-		// MyStringList l = new MyStringList();
-		// l.add("Bob");
-		// l.add("Steve");
-		// l.add("Susan");
-		// l.add("Mark");
-		// l.add("Dave");
-		// System.out.println("The list of size "+l.size()+" is "+l);
-		// l.remove("Mark");
-		// l.remove("Bob");
-		// System.out.println("The list of size "+l.size()+" is "+l);
-		// l.insert("Richard",3);
-		// System.out.println("The list of size "+l.size()+" after inserting Richard
-		// into pos 3 is "+l);
-		// l.insert("Tonya",0);
-		// System.out.println("The list of size "+l.size()+" after inserting Tonya into
-		// pos 0 is "+l);
 
 		MyStringList list = new MyStringList();
 
@@ -186,3 +170,19 @@ public class MyStringList {
 	}
 
 }
+
+/* OUTPUT
+resizing
+resizing
+Before Min Sorting
+[big, small, tall, short, round, square, enormous, tiny, gargantuan, lilliputian, numberless, none, vast, miniscule]
+-----------
+After Min Sorting
+[big, enormous, gargantuan, lilliputian, miniscule, none, numberless, round, short, small, square, tall, tiny, vast]
+-----------
+Search for "number"
+false
+-----------
+Search for "tiny"
+true
+*/

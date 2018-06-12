@@ -187,8 +187,64 @@ public class MyPersonList {
 		System.out.println("Search for \"Bob Dylan\" - 70");
 		System.out.println(pers.search(new Person("Bob", "Dylan", 70)));
 		
+		System.out.println("Print as Array");
 		Person[] x = (Person[]) pers.clone();
 		System.out.println(Arrays.toString(x));
 		
 	}
 }
+
+/* OUTPUT
+
+{
+    Person [lastName=Trinh; FirstName=Daniel; Age=23],
+    Person [lastName=Pratt; FirstName=Chris; Age=30],
+    Person [lastName=Star; FirstName=Lord; Age=20],
+    Person [lastName=Bob; FirstName=Dylan; Age=70],
+    Person [lastName=Ailen; FirstName=Susan; Age=77]
+}
+After Removing Star Lord
+{
+    Person [lastName=Trinh; FirstName=Daniel; Age=23],
+    Person [lastName=Pratt; FirstName=Chris; Age=30],
+    Person [lastName=Bob; FirstName=Dylan; Age=70],
+    Person [lastName=Ailen; FirstName=Susan; Age=77]
+}
+The list of size 4 is {
+    Person [lastName=Trinh; FirstName=Daniel; Age=23],
+    Person [lastName=Pratt; FirstName=Chris; Age=30],
+    Person [lastName=Bob; FirstName=Dylan; Age=70],
+    Person [lastName=Ailen; FirstName=Susan; Age=77]
+}
+The list of size 5 after inserting Richard into pos 3 is {
+    Person [lastName=Trinh; FirstName=Daniel; Age=23],
+    Person [lastName=Pratt; FirstName=Chris; Age=30],
+    Person [lastName=Bob; FirstName=Dylan; Age=70],
+    Person [lastName=Richard; FirstName=Marx; Age=55],
+    Person [lastName=Ailen; FirstName=Susan; Age=77]
+}
+The list of size 6 after inserting Tonya into pos 0 is {
+    Person [lastName=Trinh; FirstName=Daniel; Age=23],
+    Person [lastName=Pratt; FirstName=Chris; Age=30],
+    Person [lastName=Bob; FirstName=Dylan; Age=70],
+    Person [lastName=Tonya; FirstName=Ahi; Age=60],
+    Person [lastName=Richard; FirstName=Marx; Age=55],
+    Person [lastName=Ailen; FirstName=Susan; Age=77]
+}
+Person List after sort
+{
+    Person [lastName=Ailen; FirstName=Susan; Age=77],
+    Person [lastName=Bob; FirstName=Dylan; Age=70],
+    Person [lastName=Pratt; FirstName=Chris; Age=30],
+    Person [lastName=Richard; FirstName=Marx; Age=55],
+    Person [lastName=Tonya; FirstName=Ahi; Age=60],
+    Person [lastName=Trinh; FirstName=Daniel; Age=23]
+}
+Search for "Star Lord"- 20
+false
+Search for "Bob Dylan" - 70
+true
+Print as Array
+[Person [lastName=Ailen; FirstName=Susan; Age=77], Person [lastName=Bob; FirstName=Dylan; Age=70], Person [lastName=Pratt; FirstName=Chris; Age=30], Person [lastName=Richard; FirstName=Marx; Age=55], Person [lastName=Tonya; FirstName=Ahi; Age=60], Person [lastName=Trinh; FirstName=Daniel; Age=23]]
+
+*/
