@@ -1,4 +1,4 @@
-package Lesson8Homework.Question1;
+package Lesson8Homework.Day1.Question1;
 
 public class MyStringList {
 	private final int INITIAL_LENGTH = 4;

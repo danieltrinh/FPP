@@ -1,4 +1,4 @@
-package Lesson8Homework.Question2;
+package Lesson8Homework.Day1.Question2;
 
 import java.util.Comparator;
 
