@@ -26,11 +26,11 @@ public class Main {
 		System.out.println("List size:");
 		System.out.println(objs.size());
 
-		System.out.println("Sorted List:");
+		System.out.println("Sorted List by sales amount:");
 		Collections.sort(objs, new MarketingComparator());
 		System.out.println(objs);
 
-		System.out.println("Sorted List of employe with sales > 1000:");
+		System.out.println("Sorted List by Employee Name of employee with sales > 1000:");
 		System.out.println(listMoreThan1000(objs));
 	}
 
@@ -44,7 +44,7 @@ public class Main {
 				l.add(m);
 			}
 		}
-		Collections.sort(l, new MarketingComparator());
+		Collections.sort(l, new MarketingEmployeeNameComparator());
 		return l;
 	}
 }
@@ -70,18 +70,19 @@ after removing element at index 2 :
 ]
 List size:
 6
-Sorted List:
-[employeeName=Daniel, productName=Ipad, salesAmount=31233.543
+Sorted List by sales amount:
+[employeeName=Nathaniel, productName=Iwatch, salesAmount=213.43
 , employeeName=Ethan, productName=Ikea, salesAmount=223.324
+, employeeName=Kyle, productName=Iphone, salesAmount=234.45
+, employeeName=Daniel, productName=Ipad, salesAmount=31233.543
 , employeeName=Ethan, productName=Ikea, salesAmount=5123234.324
 , employeeName=Ethan, productName=Imac, salesAmount=6123234.324
-, employeeName=Kyle, productName=Iphone, salesAmount=234.45
-, employeeName=Nathaniel, productName=Iwatch, salesAmount=213.43
 ]
-Sorted List of employe with sales > 1000:
+Sorted List by Employee Name of employee with sales > 1000:
 [employeeName=Daniel, productName=Ipad, salesAmount=31233.543
 , employeeName=Ethan, productName=Ikea, salesAmount=5123234.324
 , employeeName=Ethan, productName=Imac, salesAmount=6123234.324
 ]
+
 
 */
