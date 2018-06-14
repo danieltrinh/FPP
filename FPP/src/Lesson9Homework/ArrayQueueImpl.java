@@ -142,7 +142,39 @@ public class ArrayQueueImpl {
 }
 
 
+/*
+Dequeing empty:
+Queue is Empty, No Dequeueing
+-1
+Peeking empty:
+Queue is Empty, No Peeking
+-1
+Resizing from size 10 to 20
+After enqueing: 
+10, 20, 30, 40, 50, 360, 30, 60, 70, 70, 70, 
+Front: 0
+Rear: 10
+Size: 11
+Deque 4 values: 
+10
+20
+30
+40
+After Dequeing 4 values: 
+50, 360, 30, 60, 70, 70, 70, 
+Size: 7
+Peeking first: 
+50
+After Peeking first: 
+50, 360, 30, 60, 70, 70, 70, 
+Resizing from size 20 to 40
+After Enqueing more than original size
+50, 360, 30, 60, 70, 70, 70, 10, 20, 30, 40, 50, 360, 30, 60, 70, 70, 70, 
+Front: 4
+Rear: 21
+Size: 18
 
+ */
 
 
 
